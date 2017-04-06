@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%; 
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  padding: 0;  
+  font-family: 'Roboto', Arial,sans-serif;
+  line-height: 1.42;
+
+}
+
+.wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex; 
+  
+    
+}
+
+.wrapper > * {
+  
+  flex: 1 100%;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container{
+  width: 80%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  
+}
+
+.title{
+  flex: 1;
+  margin-left: 2%;
+}
+
+.menu__list{
+  flex: 2;
+  
+  display: flex;
+   
+}
+
+.phone{
+  flex: 1;
+}
+
+.menu__item{
+  margin: 15px;
+}
+
+.navigation-link{
+  text-decoration: none;
+  color: #ccc;
+}
+
+
+.main{
+   /*Основной раздел будет занимать все свободное место на странице*/
+   
+   display: flex;
+   flex-direction: column;   
+   min-height: 500px;
+   margin-top: 80px;
+   width: 100%;   
+   background: url(http://placekitten.com/1600/500);
+}
+
+.title__name{
+  color: #fff;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.title__big{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.title__small{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.button{
+  width: auto;
+  margin: 0 auto;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 50px;
+  background: transparent;
+
+  &:hover{
+    background: cadetblue;
+    border: 2px solid cornflowerblue;
+  }
+}
+
+.button__pic{
+  margin-right: 5px;
+}
+
+.content-shop{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;  
+  margin: 0 auto;
+}
+
+.content-shop__item{
+  width: 20%;
+}
+
+.icon{
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.submain{
+  flex: 2;
+  min-height: 500px;
+  display: flex;
+}
+
+.footer{
+   /*Футер будет занимать столько места по вертикали, сколько и должен и не пикселя больше */
+   
+}
+
+@import 'menu';
+@import "foundation.css";
+@import "equalize.min.css";
+
+
+
