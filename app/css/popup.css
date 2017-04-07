@@ -126,12 +126,6 @@
     width: 85%; } }
 
 /* изображения внутри окна */
-.popup img {
-  display: block;
-  border: none;
-  width: 100%;
-  height: auto; }
-
 /* миниатюры слева/справа */
 .pic-left,
 .pic-right {
