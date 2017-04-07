@@ -14,16 +14,14 @@ body{
   padding: 0;  
   font-family: 'Roboto', Arial,sans-serif;
   line-height: 1.42;
-
+  display: flex;
 }
 
 .wrapper{
   position: relative;
   height: 100%;
   width: 100%;
-  display: flex; 
-  
-    
+  display: flex;    
 }
 
 .wrapper > * {
@@ -47,7 +45,7 @@ ul{
 .header{
   z-index: 10;
   position: fixed;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   height: 80px;
   width: 100%;
   top: 0;
@@ -169,34 +167,36 @@ ul{
 }
 
 .submain{
-  margin-bottom: 200px;
-  width: 100%;
-  min-height: 1000px;
-  position: relative; 
+  text-align: center;
+  margin: 10px auto auto;
+  height: auto;
+  max-width: 1300px;
+  background-color: white;
+  padding: 10px 10px 10px;   
   
 }
 
 .title__subname{
   text-align: center;
   width: 100%;
-  padding: 20px;
+  padding-top: 20px;
   font-size: 25px;
-  padding-bottom: 50px;
+  
   text-transform: uppercase;
 }
 
 .section{
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  
+  text-align: center;
+  margin: 50px auto auto;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  padding: 10px 10px 10px;   
 }
 
 .section__shop{
-  width: 20%;
   display: inline-block;
-  margin: 20px;
+	margin: 0 20px;
 }
 
 .section__price{
@@ -217,14 +217,17 @@ ul{
   border-radius: 5px;
   border: 1 px solid #ccc; 
   background: transparent;
-  margin-left: 30%;
+  
 
   &:hover{
     background: #ccc;
   }
 }
 
-
+.button__btn{
+  text-decoration: none;
+  color: black;
+}
 
 .second-section {
   background: url(../img/wear.jpg);
@@ -267,31 +270,39 @@ ul{
   margin-bottom: 10px;
 }
 
-.footer{
+.footer{   
   width: 100%;  
-  background: dimgray;   
-  height: 200px;
+  background: dimgray;  
+  height: auto;  
 }
 
-.title-footer{
-  width: 20%;
-  
+.footer-foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 70%;
+  margin: 0 auto;
 }
 
 .foot{
-  margin: auto;
-  width: 40%;
+  flex: 1; 
+  margin-bottom: 70px;  
+}
+
+.title-footer{
+  flex: 1;
+  margin-bottom: 70px;
 }
 
 .contacts{
-  width: 30%;
-  float: right;
+  flex: 1;  
   text-align: right;
   margin-right: 50px;
-  margin-top: -20px;
+  padding-top: 20px;
 }
 
 @import 'menu';
+@import 'popup';
 @import "foundation.css";
 @import "equalize.min.css";
 
