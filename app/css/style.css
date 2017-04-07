@@ -521,7 +521,7 @@ ul {
   height: 50px; }
 
 #controls label {
-  display: none;
+  display: block;
   opacity: 0.3;
   cursor: pointer; }
 
