@@ -15,6 +15,7 @@ body{
   font-family: 'Roboto', Arial,sans-serif;
   line-height: 1.42;
   display: flex;
+  outline: none;
 }
 
 .wrapper{
@@ -299,6 +300,10 @@ ul{
   text-align: right;
   margin-right: 50px;
   padding-top: 20px;
+}
+
+.fotorama{
+  min-height: 600px;
 }
 
 @import 'menu';

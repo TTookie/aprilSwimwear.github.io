@@ -7,13 +7,13 @@ block content
                 h2.title Купальники
                 ul.menu__list
                     li.menu__item
-                        a.navigation-link(href='#') Купальники
+                        a.navigation-link(href='#one') Купальники
                     li.menu__item
-                        a.navigation-link(href='#') О нас
+                        a.navigation-link(href='#two') О нас
                     li.menu__item
-                        a.navigation-link(href='#') Оплата и доставка
+                        a.navigation-link(href='#three') Оплата и доставка
                     li.menu__item
-                        a.navigation-link(href='#') Контакты
+                        a.navigation-link(href='#four') Контакты
                 .phone +3 8 066 841 18 92        
             .main
                 h3.title__name Интернет-магазин купальников
@@ -42,7 +42,7 @@ block content
                         .icon-star
                             img.icon(src='./img/star.svg')
                             p.content__text Все размеры 
-            h3.title__subname Товары, которое вас могут заинтересовать                     
+            h3.title__subname#one Товары, которое вас могут заинтересовать                     
             .submain                
                 .section
                     .section__shop
@@ -142,13 +142,13 @@ block content
                         p.section__price_nonprice 660 грн.
                         button.button_price 
                             a.button__btn(href='#win12') Подробнее 
-                        a#win2.overlay(href='#x')    
+                        a#win12.overlay(href='#x')    
                         include popup    
-
-            .second-section  
+                      
+            .second-section#two  
                 p.second-section__text Создай свой неповторимый образ!
             .third-section
-                .third-section__wrapper
+                .third-section__wrapper#three
                     h2.title__third Доставка и оплата
                     p.paragraph Оплата online картами VISA, MasterCard.
                     p.paragraph Доставка осуществляется УкрПочтой бесплатно. После оплаты товара мы отправляем Ваш заказ ценной бандеролью 1-го класса.
@@ -157,7 +157,7 @@ block content
                     p.paragraph Мы рады приветствовать Вас в нашем интернет-магазине!
                     p.paragraph Каждая женщина может почувствовать себя уникальной, может дополнить свой образ изысканными украшениями и создать свой индивидуальный и неповторимый стиль. Все изделия изготавливаются вручную, каждое изделие становится шедевром. Используемые материалы - серебро 925 пробы, муранское стекло, эмаль, кожа, драгоценные и искусственные камни.
                     p.paragraph Любой браслет может быть прекрасным подарком, большой ассортимент дает возможность сделать отличный выбор на любой вкус и по самым низким ценам.                                       
-            .footer
+            .footer#four
                 .footer-foot
                     h2.title-footer Купальники
                     p.foot Сайт разработан командой TookieTookie
@@ -167,4 +167,6 @@ block content
                         li.contacts-item Сб с 10:00 - 18:00
                         li.contacts-item Вс выходной
                         li.contacts-item Киев, ул. Мечникова, 2 БЦ "Парус"
-
+            .fotorama
+                img(src='http://s.fotorama.io/1.jpg')
+                img(src='http://s.fotorama.io/2.jpg')              

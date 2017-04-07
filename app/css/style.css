@@ -19,7 +19,8 @@ body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  outline: none; }
 
 .wrapper {
   position: relative;
@@ -332,6 +333,9 @@ ul {
   text-align: right;
   margin-right: 50px;
   padding-top: 20px; }
+
+.fotorama {
+  min-height: 600px; }
 
 /*** Стили относящиеся к модальному окну и содержанию ***/
 .popup h1,

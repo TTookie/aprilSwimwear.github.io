@@ -10,8 +10,7 @@
 		<link rel="icon" href="./img/favicon.ico" type="image/png">
 		<link rel="shortcut icon" href="./img/favicon.ico" type="image/png">
 		<link rel="stylesheet" href="./css/style.min.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><!--[if lt IE 9]>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -19,10 +18,10 @@
 				<div class="header"> 
 					<h2 class="title">Купальники</h2>
 					<ul class="menu__list">
-						<li class="menu__item"><a class="navigation-link" href="#">Купальники</a></li>
-						<li class="menu__item"><a class="navigation-link" href="#">О нас</a></li>
-						<li class="menu__item"><a class="navigation-link" href="#">Оплата и доставка</a></li>
-						<li class="menu__item"><a class="navigation-link" href="#">Контакты</a></li>
+						<li class="menu__item"><a class="navigation-link" href="#one">Купальники</a></li>
+						<li class="menu__item"><a class="navigation-link" href="#two">О нас</a></li>
+						<li class="menu__item"><a class="navigation-link" href="#three">Оплата и доставка</a></li>
+						<li class="menu__item"><a class="navigation-link" href="#four">Контакты</a></li>
 					</ul>
 					<div class="phone">+3 8 066 841 18 92        </div>
 				</div>
@@ -55,7 +54,7 @@
 						</div>
 					</div>
 				</div>
-				<h3 class="title__subname">Товары, которое вас могут заинтересовать                     </h3>
+				<h3 class="title__subname" id="one">Товары, которое вас могут заинтересовать                     </h3>
 				<div class="submain">               
 					<div class="section">
 						<div class="section__shop"><img class="section__pic" src="http://placekitten.com/g/250/250">
@@ -241,7 +240,7 @@
 						<div class="section__shop"><img class="section__pic" src="http://placekitten.com/g/250/250">
 							<p class="section__price">330 грн.</p>
 							<p class="section__price_nonprice">660 грн.</p>
-							<button class="button_price"> <a class="button__btn" href="#win12">Подробнее </a></button><a class="overlay" id="win2" href="#x">   </a>
+							<button class="button_price"> <a class="button__btn" href="#win12">Подробнее </a></button><a class="overlay" id="win12" href="#x">   </a>
 							<div class="popup">
 								<div class="pic-left"><a href="http://webformyself.com/aff/dobrovoi/practicerubber"><img src="http://dbmast.ru/wp-content/uploads/2012/11/DVD009.jpg" alt="Практический курс резиновой верстки"></a></div>
 								<h2>Уважаемые друзья!</h2>
@@ -256,11 +255,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="second-section"> 
+				<div class="second-section" id="two"> 
 					<p class="second-section__text">Создай свой неповторимый образ!</p>
 				</div>
 				<div class="third-section">
-					<div class="third-section__wrapper">
+					<div class="third-section__wrapper" id="three">
 						<h2 class="title__third">Доставка и оплата</h2>
 						<p class="paragraph">Оплата online картами VISA, MasterCard.</p>
 						<p class="paragraph">Доставка осуществляется УкрПочтой бесплатно. После оплаты товара мы отправляем Ваш заказ ценной бандеролью 1-го класса.</p>
@@ -271,7 +270,7 @@
 						<p class="paragraph">Любой браслет может быть прекрасным подарком, большой ассортимент дает возможность сделать отличный выбор на любой вкус и по самым низким ценам.                                       </p>
 					</div>
 				</div>
-				<div class="footer">
+				<div class="footer" id="four">
 					<div class="footer-foot">
 						<h2 class="title-footer">Купальники</h2>
 						<p class="foot">Сайт разработан командой TookieTookie</p>
@@ -284,7 +283,12 @@
 						</ul>
 					</div>
 				</div>
+				<div class="fotorama"><img src="http://s.fotorama.io/1.jpg"><img src="http://s.fotorama.io/2.jpg"></div>
 			</div>
 		</div>
 	</body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"><!--[if lt IE 9]>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->  
+	</script>
 </html>
