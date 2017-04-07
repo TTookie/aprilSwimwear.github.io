@@ -486,11 +486,9 @@ ul {
   background: #fff;
   padding: 5px;
   -webkit-box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
-  -o-box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
-  -ms-box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
-  box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
+          box-shadow: 2px 2px 4px #333, inset 1px 1px 0 #ddd;
   -webkit-border-radius: 5px;
-  border-radius: 5px; }
+          border-radius: 5px; }
 
 .inner {
   width: 500%; }
@@ -584,7 +582,7 @@ ul {
   display: inline-block;
   cursor: pointer;
   -webkit-border-radius: 2px;
-  border-radius: 2px; }
+          border-radius: 2px; }
 
 #active label:hover {
   background: #999; }
