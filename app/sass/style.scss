@@ -478,7 +478,35 @@ ul{
   
 }
 
+@media only screen and (max-width: 620px){
+  .content-shop{
+    width: 100%;
+  }
+  .content-shop__item{
+    flex-wrap: wrap;
+  }
+  .icon-star{
+    margin-left: 15%;
 
+    &_iconed{
+      margin-left: 35%;
+    }
+  } 
+  .main{
+    min-height: 600px;
+  } 
+}
+
+@media only screen and (max-width: 620px){
+  .section__pic{
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+	
+  
+}
 
 @import 'menu';
 @import 'popup';

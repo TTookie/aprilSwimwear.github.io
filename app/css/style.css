@@ -494,9 +494,23 @@ section.content {
   .img__section {
     padding-right: 0; } }
 
-@media only screen and (max-width: 1200px) {
-  .submain {
-    width: 60%; } }
+@media only screen and (max-width: 620px) {
+  .content-shop {
+    width: 100%; }
+  .content-shop__item {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .icon-star {
+    margin-left: 15%; }
+    .icon-star_iconed {
+      margin-left: 35%; }
+  .main {
+    min-height: 600px; } }
+
+@media only screen and (max-width: 620px) {
+  .section__pic {
+    width: 400px; } }
 
 /*** Стили относящиеся к модальному окну и содержанию ***/
 .popup h1,
