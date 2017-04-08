@@ -145,8 +145,16 @@ block content
                         a#win12.overlay(href='#x')    
                         include popup    
                       
-            .second-section#two  
-                p.second-section__text Создай свой неповторимый образ!
+            .second-section#two
+                svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1200 600', width='1200px', height='600px', preserveaspectratio='xMidYMid slice')
+                    defs
+                        mask#mask(x='0', y='0', width='1200', height='600')
+                            rect(x='0', y='0', width='1200', height='600')
+                            text(x='560', y='200') Создай свой
+                            text(x='560', y='300') неповторимый образ!   
+                    rect(x='0', y='0', width='1200', height='600')
+                img(src='./img/sea.jpg')      
+                
             .third-section
                 .third-section__wrapper#three
                     h2.title__third Доставка и оплата

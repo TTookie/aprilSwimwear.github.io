@@ -231,7 +231,10 @@ ul{
 }
 
 .second-section {
-  background: url(../img/wear.jpg);
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
+  letter-spacing:-0.03em;
+  font-weight: 600;  
   background-repeat: no-repeat;
   background-size: cover;
   width: 90%;
@@ -302,9 +305,26 @@ ul{
   padding-top: 20px;
 }
 
-.fotorama{
-  min-height: 600px;
+svg {
+    width: 90%;
+    height: 100%;
+    position:absolute;
 }
+svg text {
+    text-anchor: middle;
+}
+svg mask rect {
+    fill: rgba(255, 255, 255, 0.6);
+}
+svg > rect {
+    fill: #fff;
+    -webkit-mask: url(#mask);
+    mask: url(#mask);
+    
+}
+
+
+
 
 
 
