@@ -99,14 +99,27 @@ ul {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
-          flex: 1; }
+          flex: 1;
+  color: #01234c; }
 
 .menu__item {
   margin: 15px; }
 
 .navigation-link {
   text-decoration: none;
-  color: #ccc; }
+  color: #014b60;
+  -webkit-transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53); }
+  .navigation-link:hover {
+    color: #a6d0ef; }
+
+.menu__link {
+  color: #01234c;
+  cursor: pointer;
+  -webkit-transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53); }
+  .menu__link:hover {
+    color: #a6d0ef; }
 
 .main {
   display: -webkit-box;
@@ -250,12 +263,13 @@ ul {
 
 .second-section {
   font-family: 'Roboto', sans-serif;
-  font-size: 5em;
+  font-size: 40px;
+  color: #e0f7e6;
   letter-spacing: -0.03em;
   font-weight: 600;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,7 +280,7 @@ ul {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 700px;
+  min-height: 500px;
   margin-bottom: 80px; }
 
 .second-section__text {
@@ -276,6 +290,17 @@ ul {
   position: relative;
   margin-top: 100px;
   font-size: 30px; }
+
+.text__section {
+  position: absolute;
+  left: 10%;
+  top: 20%; }
+
+.img__section {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-right: 250px; }
 
 .third-section {
   margin-bottom: 100px;
@@ -294,7 +319,7 @@ ul {
 
 .footer {
   width: 100%;
-  background: dimgray;
+  background: #014b60;
   height: auto; }
 
 .footer-foot {
@@ -318,14 +343,24 @@ ul {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  margin-top: 30px;
+  color: #a6d0ef;
+  font-weight: 400; }
 
 .title-footer {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+  margin-top: 30px;
+  color: #a6d0ef;
+  -webkit-transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  transition: color 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  cursor: pointer; }
+  .title-footer:hover {
+    color: #01234c; }
 
 .contacts {
   -webkit-box-flex: 1;
@@ -334,23 +369,87 @@ ul {
           flex: 1;
   text-align: right;
   margin-right: 50px;
-  padding-top: 20px; }
+  color: #a6d0ef; }
 
-svg {
-  width: 90%;
-  height: 100%;
-  position: absolute; }
+.backgrounds .background {
+  position: relative;
+  height: 20px;
+  left: 0px;
+  right: 0px;
+  top: 120px;
+  -webkit-animation: bg 2s ease-in-out infinite;
+          animation: bg 2s ease-in-out infinite; }
+  .backgrounds .background .head {
+    position: absolute;
+    bottom: 100%;
+    left: 0px;
+    right: 0px;
+    height: 20px; }
+  .backgrounds .background.layer-3 {
+    background-color: #a9e8db;
+    top: 135px; }
+    .backgrounds .background.layer-3 .head {
+      background: url(../img/grapefruitwave_3.svg);
+      background-position: -60px 0px; }
+  .backgrounds .background.layer-2 {
+    background-color: #01bfc4;
+    top: 128px;
+    -webkit-animation-delay: -0.5s;
+            animation-delay: -0.5s; }
+    .backgrounds .background.layer-2 .head {
+      background: url(../img/grapefruitwave_2.svg);
+      background-position: -40px 0px; }
+  .backgrounds .background.layer-1 {
+    height: 350px;
+    background-color: #0184a9;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+    .backgrounds .background.layer-1 .head {
+      background: url(../img/grapefruitwave_1.svg); }
 
-svg text {
-  text-anchor: middle; }
+section.content {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  right: 220px;
+  color: #fff; }
+  section.content h1, section.content h2, section.content h3, section.content h4, section.content h5, section.content h6, section.content p {
+    margin: 0;
+    font-weight: 400; }
+  section.content h1 {
+    font-size: 32px; }
 
-svg mask rect {
-  fill: rgba(255, 255, 255, 0.6); }
+@-webkit-keyframes bg {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
-svg > rect {
-  fill: #fff;
-  -webkit-mask: url(#mask);
-  mask: url(#mask); }
+@keyframes bg {
+  0%, 100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
+
+@-webkit-keyframes straw {
+  0%, 100% {
+    -webkit-transform: translateY(-1px) rotate(6deg);
+            transform: translateY(-1px) rotate(6deg); }
+  50% {
+    -webkit-transform: translateY(0px) rotate(6deg);
+            transform: translateY(0px) rotate(6deg); } }
+
+@keyframes straw {
+  0%, 100% {
+    -webkit-transform: translateY(-1px) rotate(6deg);
+            transform: translateY(-1px) rotate(6deg); }
+  50% {
+    -webkit-transform: translateY(0px) rotate(6deg);
+            transform: translateY(0px) rotate(6deg); } }
 
 /*** Стили относящиеся к модальному окну и содержанию ***/
 .popup h1,

@@ -4,7 +4,8 @@ block content
     .wrapper
         .container
             .header 
-                h2.title Купальники
+                h2.title 
+                    a.menu__link Купальники                
                 ul.menu__list
                     li.menu__item
                         a.navigation-link(href='#one') Купальники
@@ -146,15 +147,20 @@ block content
                         include popup    
                       
             .second-section#two
-                svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1200 600', width='1200px', height='600px', preserveaspectratio='xMidYMid slice')
-                    defs
-                        mask#mask(x='0', y='0', width='1200', height='600')
-                            rect(x='0', y='0', width='1200', height='600')
-                            text(x='560', y='200') Создай свой
-                            text(x='560', y='300') неповторимый образ!   
-                    rect(x='0', y='0', width='1200', height='600')
-                img(src='./img/sea.jpg')      
-                
+                .backgrounds                    
+                    .background.layer-3
+                        .head
+                    .background.layer-2
+                        .head
+                    .background.layer-1
+                        .head      
+                        .text__section
+                            p
+                                | Создай свой
+                                br
+                                | неповторимый образ!
+                                br
+                        img.img__section(src='./img/wear2.png')
             .third-section
                 .third-section__wrapper#three
                     h2.title__third Доставка и оплата
@@ -171,8 +177,7 @@ block content
                     p.foot Сайт разработан командой TookieTookie
                     ul.contacts
                         li.contacts-item vintorp.ua@gmail.com +3 8 066 841 18 92 
-                        li.contacts-item Пн-Пт с 9:00 -19:00
-                        li.contacts-item Сб с 10:00 - 18:00
+                        li.contacts-item Пн-Пт с 9:00 -19:00, Сб с 10:00 - 18:00                        
                         li.contacts-item Вс выходной
                         li.contacts-item Киев, ул. Мечникова, 2 БЦ "Парус"
             
