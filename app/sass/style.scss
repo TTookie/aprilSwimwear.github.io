@@ -57,6 +57,9 @@ ul{
   
 }
 
+
+
+
 .title{
   flex: 1;
   margin-left: 2%;
@@ -96,8 +99,7 @@ ul{
   }
 }
 
-.main{
-      
+.main{      
    display: flex;
    flex-direction: column;   
    min-height: 500px;
@@ -114,6 +116,10 @@ ul{
   text-align: center;
   margin-bottom: 20px;
   
+  &_dark{
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .title__big{
@@ -180,6 +186,11 @@ ul{
   vertical-align: middle;
 }
 
+.title__subname{
+  color: #014b60;
+
+}
+
 .submain{
   text-align: center;
   margin: 10px auto auto;
@@ -210,7 +221,7 @@ ul{
 
 .section__shop{
   display: inline-block;
-	margin: 0 20px;
+	margin: 5px 20px;
 }
 
 .section__price{
@@ -220,7 +231,9 @@ ul{
   &_nonprice{
     text-align: center;
     text-decoration: line-through;
+    color: #01234c;
   }
+  
 }
 
 .button_price{
@@ -229,18 +242,23 @@ ul{
   cursor: pointer;
   padding: 7px;
   border-radius: 5px;
-  border: 1 px solid #ccc; 
-  background: transparent;
+  border: none; 
+  color: #a6d0ef;
+  background: #014b60;
   
 
   &:hover{
-    background: #ccc;
+    background: #a6d0ef;
   }
 }
 
 .button__btn{
   text-decoration: none;
-  color: black;
+  color: #a6d0ef;
+
+  &:hover{
+    color: #014b60;
+  }
 }
 
 .second-section {
@@ -296,6 +314,9 @@ ul{
 .title__third{
   text-align: center;
   padding: 20px;
+  color: #01234c;
+  background: #a6d0ef;
+  margin-bottom: 10px;
 }
 
 .paragraph{
@@ -305,7 +326,8 @@ ul{
 .footer{   
   width: 100%;  
   background: #014b60;  
-  height: auto;  
+  height: auto; 
+  
 }
 
 .footer-foot{
@@ -424,9 +446,43 @@ ul{
 }
 
 
+@media only screen and (max-width: 959px) {
+	.header {
+		flex-direction: column;	       
+	} 
+  .phone{
+    display: none;
+  }
+}
 
+@media only screen and (max-width: 992px) {
+	.footer-foot{
+    flex-direction: column;
+  }
+  .title-footer{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .foot{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .contacts{
+    text-align: center;
+    margin-right: 0;
+    border-top: 1px solid #a6d0ef;
+  }
+  .img__section{
+    padding-right: 0;
+  }
+  
+}
 
-
+@media only screen and (max-width: 1200px){
+  .submain{
+    width: 60%;
+  }
+}
 
 @import 'menu';
 @import 'popup';
