@@ -475,7 +475,9 @@ ul{
   .img__section{
     padding-right: 0;
   }
-  
+  .popup{
+    flex-direction: column;
+  }
 }
 
 @media only screen and (max-width: 620px){
@@ -495,17 +497,21 @@ ul{
   .main{
     min-height: 600px;
   } 
-}
-
-@media only screen and (max-width: 620px){
   .section__pic{
     width: 400px;
   }
+  .text__section{
+    font-size: 25px;
+  }
 }
 
-@media only screen and (max-width: 480px) {
-	
-  
+
+
+@media only screen and (max-width: 320px) {
+	.menu__item{
+    margin: 0;
+    
+  }  
 }
 
 @import 'menu';

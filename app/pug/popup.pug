@@ -1,35 +1,14 @@
 
 .popup 
   .popup__wear
-    h3.title__name.title__name_dark Интернет-магазин купальников
-    p.section__price.section__price_popup 330 грн.
-    p.section__price_nonprice 660 грн.   
+    h3.title__name.title__name_dark Купальник San-Marino
     p.section__description Браслет серебряный; вид цепочки - змейка; камни - кубический цирконий; подвески-шарм из серебра с муранским стеклом
-    p.section__description Доставка осуществляется УкрПочтой бесплатно.
-    p.section__par Размеры
-    ul.section__name 
-      li.section__item S        
-      li.section__item M        
-      li.section__item L        
-      li.section__item XL
-    ul.section__name
-      li.section__item  
-        button.button__section 
-            img.button__pic(src='./img/favicon.ico')
-            | Купить!
-      li.section__item  
-        button.button__section 
-            img.button__pic(src='./img/favicon.ico')
-            | Купить!  
-      li.section__item  
-        button.button__section 
-            img.button__pic(src='./img/favicon.ico')
-            | Купить!  
-      li.section__item  
-        button.button__section 
-            img.button__pic(src='./img/favicon.ico')
-            | Купить!                      
-  .fotorama(data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
+    
+  .fotorama(data-width="100%"     
+     data-minwidth="320"
+     data-maxwidth="820"
+     data-maxheight='300'     
+     data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
     img(src='./img/girl.jpg')
     img(src='./img/wear.jpg')
     img(src='./img/girl.jpg')
@@ -38,5 +17,23 @@
     img(src='./img/wear.jpg')
     img(src='./img/girl.jpg')
     img(src='./img/wear.jpg')
-    img(src='./img/girl.jpg')                                 
+    img(src='./img/girl.jpg')  
+  form.form
+    .form-group
+      label(for='lead_city') В каком Вы городе?
+      input.group__form#lead_city.form-control(type='name', placeholder='к примеру, Киев')
+    .form-group 
+      label(for='lead_phone') Номер телефона
+      input.group__input#lead_phone.form-control(type='phone', placeholder='+38 123 456 7890')
+    .delivery  
+      label(for='lead_delivery') Как желаете получить?
+      select.group__select#lead_delivery.form-control
+        option Доставка Новой Почтой
+        option Приеду в шоурум (г.Киев)
+        option Пока не знаю. Жду звонка
+    p.deliv
+      | Сразу после отправки заявки Вы окажетесь на странице определения размера.
+      | Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
+      | Если вы не уверены в размере - мы поможем по телефону.
+  button.btn-lg.btn-success(type='submit', style='margin-top: 10px;') Отправить заявку                                   
   a.close(title='Закрыть', href='#close')
