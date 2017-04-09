@@ -180,15 +180,38 @@ padding: 5px;
 }
 
 .form-group{
-    text-align: left; 
-    margin-left: 5px; 
+    text-align: center; 
+     
     margin-top: 10px;   
+    flex: 1;
+
+    label{
+        margin-right: 15px;
+        margin-bottom: 5px;
+        color: #014b60;
+        font-weight: 600;
+    }
+
+    input{
+        color: #014b60; 
+        
+    }
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: row;
 }
 
 .delivery{
     text-align: left; 
-    margin-left: 5px; 
-    margin-top: 10px;         
+    margin-left: 20%; 
+    margin-top: 10px;   
+
+    label{
+        color: #014b60;
+        font-weight: 600;
+    }      
 }
 
 .deliv{
@@ -198,13 +221,13 @@ padding: 5px;
 }
 
 .group__form{
-    margin-left: 30px;
+    
     padding: 5px;
     border-radius: 4px;
 }
 
 .group__input{
-    margin-left: 53px;
+    
     padding: 5px;
     border-radius: 4px;
 }
@@ -212,4 +235,18 @@ padding: 5px;
 .group__select{
     padding: 5px;
     border-radius: 4px;
+}
+
+.btn-lg{
+    padding: 7px;
+    border-radius: 4px;
+    background: #014b60; 
+    color: #a6d0ef;
+    cursor: pointer;
+    border: none;
+
+    &:hover{
+        color: #014b60;
+        background: #a6d0ef;
+    }
 }
