@@ -129,7 +129,12 @@
 /* планшет */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   .popup {
-    width: 95%; } }
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 /* смарт */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -207,7 +212,6 @@
       -ms-flex: 1;
           flex: 1; }
   .form-group label {
-    margin-right: 15px;
     margin-bottom: 5px;
     color: #014b60;
     font-weight: 600; }
@@ -224,6 +228,16 @@
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row; }
+  @media (max-width: 768px) {
+    .form-inputs {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; } }
 
 .delivery {
   text-align: left;
@@ -237,6 +251,9 @@
   text-align: left;
   padding: 0;
   margin: 0; }
+  @media (max-width: 320px) {
+    .deliv {
+      display: none; } }
 
 .group__form {
   padding: 5px;
@@ -264,3 +281,8 @@
   .btn-lg:hover {
     color: #014b60;
     background: #a6d0ef; }
+
+.section__description {
+  text-align: left;
+  font-weight: bold;
+  color: #014b60; }

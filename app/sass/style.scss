@@ -1,3 +1,5 @@
+@import "_mixin";
+
 * {
   margin: 0;
   padding: 0;
@@ -53,12 +55,12 @@ ul{
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  
+  justify-content: space-between;
+
+  @include laptop{
+    flex-direction: column;
+  }   
 }
-
-
-
 
 .title{
   flex: 1;
@@ -73,10 +75,24 @@ ul{
 .phone{
   flex: 1;
   color: #01234c;
+
+  @include laptop{
+    display: none;
+  }
 }
 
 .menu__item{
-  padding: 15px;
+  margin: 15px;
+
+  @include phones{
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  @include iphone{    
+    padding-left: 5px;
+  }
 }
 
 .navigation-link{
@@ -108,6 +124,10 @@ ul{
    background: url(../img/girl.jpg);
    background-repeat: no-repeat;
    background-size: cover;
+
+   @include tablets{
+     min-height: 600px;
+   }
 }
 
 .title__name{
@@ -162,7 +182,10 @@ ul{
   display: flex;
   justify-content: center;  
   margin: 0 auto;
-  
+
+  @include tablets{
+    width: 100%;
+  }
 }
 
 .content-shop__item{
@@ -170,6 +193,10 @@ ul{
   display: flex;
   flex-direction: row;
   margin-right: 30px;
+
+  @include tablets{
+    flex-wrap: wrap;
+  }
 }
 
 .content__text{
@@ -184,6 +211,17 @@ ul{
   width: 40px;
   height: 40px;
   vertical-align: middle;
+}
+
+.icon-star{
+
+  @include tablets{
+    margin-left: 15%;
+
+    &_iconed{
+      margin-left: 35%;
+    }
+  }
 }
 
 .title__subname{
@@ -222,6 +260,10 @@ ul{
 .section__shop{
   display: inline-block;
 	margin: 5px 20px;
+
+  @include iphone{
+    margin: 0;
+  }
 }
 
 .section__price{
@@ -232,8 +274,17 @@ ul{
     text-align: center;
     text-decoration: line-through;
     color: #01234c;
+  }  
+}
+
+.section__pic{
+
+  @include tablets{
+    width: 400px;
   }
-  
+  @include phones{
+    width: auto;
+  }
 }
 
 .button_price{
@@ -273,7 +324,7 @@ ul{
   margin: 0 auto;
   display: flex;
   flex-direction: column;   
-  min-height: 500px;
+  min-height: 400px;
   margin-bottom: 80px;    
 }
 
@@ -291,6 +342,9 @@ ul{
  left: 10%;
  top: 20%;
  
+ @include tablets{
+   font-size: 25px;
+ }
 }
 
 .img__section{
@@ -298,6 +352,10 @@ ul{
   right: 0;
   bottom: 0;
   padding-right: 250px;
+
+  @include laptop{
+    padding-right: 0;
+  }
 }
 
 .third-section{
@@ -336,6 +394,14 @@ ul{
   justify-content: space-between; 
   width: 70%;
   margin: 0 auto;
+
+  @include laptop{
+    flex-direction: column;
+  }
+
+  @include phones{
+    width: 90%;
+  }
 }
 
 .foot{
@@ -344,6 +410,11 @@ ul{
   margin-top: 30px;
   color: #a6d0ef;
   font-weight: 400;
+
+  @include laptop{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 
 .title-footer{
@@ -353,6 +424,11 @@ ul{
   color: #a6d0ef;
   transition: color .25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   cursor: pointer;
+
+  @include laptop{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 
   &:hover{
     color: #01234c;
@@ -364,9 +440,16 @@ ul{
   text-align: right;
   margin-right: 50px;
   color: #a6d0ef;
+
+  @include laptop{
+    text-align: center;
+    margin-right: 0;
+    border-top: 1px solid #a6d0ef;
+  }
 }
 
 .backgrounds {
+  margin-top: -100px;
       .background {
          position: relative;         
          height:20px;
@@ -446,77 +529,9 @@ ul{
 }
 
 
-@media only screen and (max-width: 959px) {
-	.header {
-		flex-direction: column;	       
-	} 
-  .phone{
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-	.footer-foot{
-    flex-direction: column;
-  }
-  .title-footer{
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .foot{
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  .contacts{
-    text-align: center;
-    margin-right: 0;
-    border-top: 1px solid #a6d0ef;
-  }
-  .img__section{
-    padding-right: 0;
-  }
-  .popup{
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 620px){
-  .content-shop{
-    width: 100%;
-  }
-  .content-shop__item{
-    flex-wrap: wrap;
-  }
-  .icon-star{
-    margin-left: 15%;
-
-    &_iconed{
-      margin-left: 35%;
-    }
-  } 
-  .main{
-    min-height: 600px;
-  } 
-  .section__pic{
-    width: 400px;
-  }
-  .text__section{
-    font-size: 25px;
-  }
-  .form-inputs{
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-}
 
 
 
-@media only screen and (max-width: 360px) {
-	.menu__item{
-    margin: auto;
-    padding: 0;
-  }  
-}
 
 @import 'menu';
 @import 'popup';
