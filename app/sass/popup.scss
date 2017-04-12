@@ -7,16 +7,29 @@ color: #01234c;
 font-size: 35px;
 font-weight: bold;
 text-align: center;
+
 }
 .popup h1 { /* заголовок 1 */
 font-size:24px;
+
+@include phones{
+      font-size: 18px;
+    }
 }
 .popup h2 { /* заголовок 2 */
 font-size: 1.5em;
+
+@include phones{
+      font-size: 18px;
+    }
 }
 .popup h3 { /* заголовок 3 */
 font-size: 25px;
 text-align: center;
+
+@include phones{
+      font-size: 18px;
+    }
 }
 /* Базовые стили слоя затемнения и модального окна  */
 .overlay {
@@ -51,7 +64,7 @@ z-index: 10000;
 margin: 0 auto;
 width: 100%;
 min-width: 320px;
-max-width: 820px;
+max-width: 920px;
 /* фиксированное позиционирование, окно стабильно при прокрутке */
 position: fixed;
 padding: 15px;
@@ -67,6 +80,7 @@ transform: translate(-50%, -150%);
 transition: transform 0.6s ease-out;
 
 
+
 }
 /* активируем мод. окно */
 .overlay:target+.popup {
@@ -79,8 +93,8 @@ position: absolute;
 padding: 0;
 top: -10px;
 right: -10px;
-width: 22px;
-height: 22px;
+width: 26px;
+height: 26px;
 border: 2px solid #ccc;
 border-radius: 50%;
 background-color: rgba(61, 61, 61, 0.8);
@@ -96,6 +110,8 @@ color: rgba(255, 255, 255, 0.9);
 content: '\2715';
 text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
 font-size: 12px;
+
+
  
 }
 
@@ -105,18 +121,26 @@ background-color: rgba(252, 20, 0, 0.8);
 .popup p {
 margin: 0;
 padding: 5px;
+
+@include tablets{
+    margin-left: 10px;
+}
+
+@include phones{
+    padding: 0;
+}
 }
 /* планшет */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.popup {
 		width: 95%;
-        flex-direction: column;
+        flex-direction: column;        
 	}
 }
 /* смарт */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	.popup {
-		width:85%;
+		width:95%;
 	}
 }
 /* изображения внутри окна */
@@ -145,7 +169,38 @@ padding: 5px;
 
 .popup__wear{
     flex: 1;
+    display: flex;
+    flex-direction: row;
     
+        @include phones{
+        flex-direction: column;
+        
+    }
+}
+
+.deliv__pic{
+    width: 300px;
+    margin-left: -70px;
+
+    @include tablets{
+        width: 100%;
+        margin-left: 0;
+    }
+    @include phones{
+        width: 60%;
+    }
+}
+
+.popup__first{
+    flex: 1;
+}
+
+.form{
+    flex: 1;
+
+    @include phones{
+        margin-top: -85px;
+    }
 }
 
 .section__par{
@@ -180,13 +235,13 @@ padding: 5px;
 }
 
 .form-group{
-    text-align: center; 
-     
+    text-align: center;      
     margin-top: 10px;   
     flex: 1;
 
-    label{
-        
+    
+
+    label{        
         margin-bottom: 5px;
         color: #014b60;
         font-weight: 600;
@@ -194,24 +249,35 @@ padding: 5px;
 
     input{
         color: #014b60; 
-        
+        @include phones{
+        width: 100%;
+    }
     }
 }
 
 .form-inputs{
     display: flex;
     flex-direction: row;
+    margin-top: 70px;
 
     @include tablets{
      flex-direction: column;
-     flex-wrap: wrap;
+     flex-wrap: wrap;     
     }
 }
 
 .delivery{
-    text-align: left; 
-    margin-left: 20%; 
+    display: flex;
+    flex-direction: row;
     margin-top: 10px;   
+
+    @include tablets{
+     flex-direction: column;
+     flex-wrap: wrap; 
+    }
+    @include phones{
+        margin-left: 10px;
+    }
 
     label{
         color: #014b60;
@@ -223,6 +289,11 @@ padding: 5px;
     text-align: left;
     padding: 0;
     margin: 0;
+
+    @include tablets{
+        font-size: 14px;
+        
+    }
 
     @include iphone{
      display: none;
@@ -254,6 +325,10 @@ padding: 5px;
     cursor: pointer;
     border: none;
 
+    @include phones{
+        margin-top: 5px;
+    }
+
     &:hover{
         color: #014b60;
         background: #a6d0ef;
@@ -264,4 +339,10 @@ padding: 5px;
     text-align: left;
     font-weight: bold;
     color: #014b60;
+
+    @include phones{
+        font-size: 14px;
+        text-align: center;
+        
+    }
 }

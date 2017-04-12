@@ -139,7 +139,8 @@ ul{
   &_dark{
     padding-top: 0;
     margin-bottom: 0;
-  }
+
+    }
 }
 
 .title__big{
@@ -151,9 +152,13 @@ ul{
 
 .title__small{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
   color: #fff;
   text-transform: uppercase;
+
+  @include phones{
+    margin-bottom: 50px;
+  }
 }
 
 .button{
@@ -297,6 +302,9 @@ ul{
   color: #a6d0ef;
   background: #014b60;
   
+  @include phones{
+    margin-bottom: 20px;
+  }
 
   &:hover{
     background: #a6d0ef;
@@ -344,6 +352,10 @@ ul{
  
  @include tablets{
    font-size: 25px;
+ }
+
+ @include phones{
+   font-size: 20px;
  }
 }
 

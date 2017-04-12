@@ -30,7 +30,10 @@
 					<h1 class="title__big">
 						 Стильные купальники <br>для незабываемого отдыха</h1>
 					<h2 class="title__small">Купальники по самым лучшим ценам!</h2>
-					<button class="button"> <img class="button__pic" src="./img/favicon.ico">Купить в один клик!</button>
+					<!--button.button 
+					img.button__pic(src='./img/favicon.ico')
+					a.navigation-link(href='#form')| Купить в один клик!
+					-->
 					<div class="content-shop">
 						<div class="content-shop__item">
 							<div class="icon-star"><img class="icon" src="./img/star.svg"></div>
@@ -59,52 +62,54 @@
 							<button class="button_price"> <a class="button__btn" href="#win1">Подробнее</a></button><a class="overlay" id="win1" href="#x">   </a>
 							<div class="popup"> 
 								<div class="popup__wear">
-									<h3 class="title__name title__name_dark">Купальник San-Marino</h3>
-									<p class="section__description">Размеры: S, M, L </p>
-									<p class="section__description">Материал: Nylon, Spandex</p><img src="./img/wear1-1.png">
+									<div class="popup__first">
+										<h3 class="title__name title__name_dark">Купальник San-Marino</h3>
+										<p class="section__description">Размеры: S, M, L </p>
+										<p class="section__description">Материал: Nylon, Spandex</p><img class="deliv__pic" src="./img/wear1-1.png">
+									</div>
+									<!--.fotorama(data-width="100%"     
+									data-minwidth="320"
+									data-maxwidth="820"
+									data-maxheight='300'     
+									data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')  
+									-->
+									<form class="form" id="form">
+										<div class="form-inputs">
+											<div class="form-group">
+												<label for="lead_city">В каком Вы городе?</label>
+												<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
+											</div>
+											<div class="form-group"> 
+												<label for="lead_phone">Номер телефона</label>
+												<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
+											</div>
+										</div>
+										<div class="delivery"> 
+											<label for="lead_delivery">Как желаете получить?
+												<select class="group__select form-control" id="lead_delivery">
+													<option>Доставка Новой Почтой</option>
+													<option>Приеду в шоурум (г.Киев)</option>
+													<option>Пока не знаю. Жду звонка</option>
+												</select>
+											</label>
+										</div>
+										<p class="deliv">
+											Сразу после отправки заявки Вы окажетесь на странице определения размера.
+											Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
+											Если вы не уверены в размере - мы поможем по телефону.
+										</p>
+										<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
+									</form>
 								</div>
-								<!--.fotorama(data-width="100%"     
-								 data-minwidth="320"
-								 data-maxwidth="820"
-								 data-maxheight='300'     
-								 data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')  
-								-->
-								<form class="form">
-									<div class="form-inputs">
-										<div class="form-group">
-											<label for="lead_city">В каком Вы городе?</label>
-											<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
-										</div>
-										<div class="form-group"> 
-											<label for="lead_phone">Номер телефона</label>
-											<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
-										</div>
-									</div>
-									<div class="delivery"> 
-										<label for="lead_delivery">Как желаете получить?
-											<select class="group__select form-control" id="lead_delivery">
-												<option>Доставка Новой Почтой</option>
-												<option>Приеду в шоурум (г.Киев)</option>
-												<option>Пока не знаю. Жду звонка</option>
-											</select>
-										</label>
-									</div>
-									<p class="deliv">
-										Сразу после отправки заявки Вы окажетесь на странице определения размера.
-										Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
-										Если вы не уверены в размере - мы поможем по телефону.
-									</p>
-									<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
-								</form>
 							</div>
 						</div>
 						<div class="section__shop"><img class="section__pic" src="./img/wear3.png">
@@ -113,52 +118,54 @@
 							<button class="button_price"> <a class="button__btn" href="#win2">Подробнее</a></button><a class="overlay" id="win2" href="#x">   </a>
 							<div class="popup"> 
 								<div class="popup__wear">
-									<h3 class="title__name title__name_dark">Купальник Sunset</h3>
-									<p class="section__description">Размеры: S, M, L </p>
-									<p class="section__description">Материал: Nylon, Spandex</p><img src="./img/wear3-3.png">
+									<div class="popup__first">
+										<h3 class="title__name title__name_dark">Купальник SunSet</h3>
+										<p class="section__description">Размеры: S, M, L </p>
+										<p class="section__description">Материал: Nylon, Spandex</p><img class="deliv__pic" src="./img/wear3-3.png">
+									</div>
+									<!--.fotorama(data-width="100%"     
+									data-minwidth="320"
+									data-maxwidth="820"
+									data-maxheight='300'     
+									data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')  
+									-->
+									<form class="form" id="form">
+										<div class="form-inputs">
+											<div class="form-group">
+												<label for="lead_city">В каком Вы городе?</label>
+												<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
+											</div>
+											<div class="form-group"> 
+												<label for="lead_phone">Номер телефона</label>
+												<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
+											</div>
+										</div>
+										<div class="delivery"> 
+											<label for="lead_delivery">Как желаете получить?
+												<select class="group__select form-control" id="lead_delivery">
+													<option>Доставка Новой Почтой</option>
+													<option>Приеду в шоурум (г.Киев)</option>
+													<option>Пока не знаю. Жду звонка</option>
+												</select>
+											</label>
+										</div>
+										<p class="deliv">
+											Сразу после отправки заявки Вы окажетесь на странице определения размера.
+											Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
+											Если вы не уверены в размере - мы поможем по телефону.
+										</p>
+										<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
+									</form>
 								</div>
-								<!--.fotorama(data-width="100%"     
-								 data-minwidth="320"
-								 data-maxwidth="820"
-								 data-maxheight='300'     
-								 data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')  
-								-->
-								<form class="form">
-									<div class="form-inputs">
-										<div class="form-group">
-											<label for="lead_city">В каком Вы городе?</label>
-											<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
-										</div>
-										<div class="form-group"> 
-											<label for="lead_phone">Номер телефона</label>
-											<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
-										</div>
-									</div>
-									<div class="delivery"> 
-										<label for="lead_delivery">Как желаете получить?
-											<select class="group__select form-control" id="lead_delivery">
-												<option>Доставка Новой Почтой</option>
-												<option>Приеду в шоурум (г.Киев)</option>
-												<option>Пока не знаю. Жду звонка</option>
-											</select>
-										</label>
-									</div>
-									<p class="deliv">
-										Сразу после отправки заявки Вы окажетесь на странице определения размера.
-										Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
-										Если вы не уверены в размере - мы поможем по телефону.
-									</p>
-									<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
-								</form>
 							</div>
 						</div>
 						<div class="section__shop"><img class="section__pic" src="./img/wear4.png">
@@ -167,52 +174,54 @@
 							<button class="button_price"> <a class="button__btn" href="#win3">Подробнее</a></button><a class="overlay" id="win3" href="#x">   </a>
 							<div class="popup"> 
 								<div class="popup__wear">
-									<h3 class="title__name title__name_dark">Купальник Sunrise</h3>
-									<p class="section__description">Размеры: S, M, L </p>
-									<p class="section__description">Материал: Nylon, Spandex</p><img src="./img/wear4-4.png">
+									<div class="popup__first">
+										<h3 class="title__name title__name_dark">Купальник SunRise</h3>
+										<p class="section__description">Размеры: S, M, L </p>
+										<p class="section__description">Материал: Nylon, Spandex</p><img class="deliv__pic" src="./img/wear4-4.png">
+									</div>
+									<!--.fotorama(data-width="100%"     
+									data-minwidth="320"
+									data-maxwidth="820"
+									data-maxheight='300'     
+									data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')
+									img(src='./img/wear.jpg')
+									img(src='./img/girl.jpg')  
+									-->
+									<form class="form" id="form">
+										<div class="form-inputs">
+											<div class="form-group">
+												<label for="lead_city">В каком Вы городе?</label>
+												<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
+											</div>
+											<div class="form-group"> 
+												<label for="lead_phone">Номер телефона</label>
+												<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
+											</div>
+										</div>
+										<div class="delivery"> 
+											<label for="lead_delivery">Как желаете получить?
+												<select class="group__select form-control" id="lead_delivery">
+													<option>Доставка Новой Почтой</option>
+													<option>Приеду в шоурум (г.Киев)</option>
+													<option>Пока не знаю. Жду звонка</option>
+												</select>
+											</label>
+										</div>
+										<p class="deliv">
+											Сразу после отправки заявки Вы окажетесь на странице определения размера.
+											Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
+											Если вы не уверены в размере - мы поможем по телефону.
+										</p>
+										<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
+									</form>
 								</div>
-								<!--.fotorama(data-width="100%"     
-								 data-minwidth="320"
-								 data-maxwidth="820"
-								 data-maxheight='300'     
-								 data-allowfullscreen='native', data-nav='thumbs', data-loop='true', data-autoplay='true')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')
-								img(src='./img/wear.jpg')
-								img(src='./img/girl.jpg')  
-								-->
-								<form class="form">
-									<div class="form-inputs">
-										<div class="form-group">
-											<label for="lead_city">В каком Вы городе?</label>
-											<input class="group__form form-control" id="lead_city" type="name" placeholder="к примеру, Киев">
-										</div>
-										<div class="form-group"> 
-											<label for="lead_phone">Номер телефона</label>
-											<input class="group__input form-control" id="lead_phone" type="phone" placeholder="+38 123 456 7890">
-										</div>
-									</div>
-									<div class="delivery"> 
-										<label for="lead_delivery">Как желаете получить?
-											<select class="group__select form-control" id="lead_delivery">
-												<option>Доставка Новой Почтой</option>
-												<option>Приеду в шоурум (г.Киев)</option>
-												<option>Пока не знаю. Жду звонка</option>
-											</select>
-										</label>
-									</div>
-									<p class="deliv">
-										Сразу после отправки заявки Вы окажетесь на странице определения размера.
-										Мы это сделали, чтобы вам было проще определиться точно с нужным размером, пока мы звоним вам.
-										Если вы не уверены в размере - мы поможем по телефону.
-									</p>
-									<button class="btn-lg btn-success" type="submit">Отправить заявку                                   </button><a class="close" title="Закрыть" href="#close"> </a>
-								</form>
 							</div>
 						</div>
 					</div>
