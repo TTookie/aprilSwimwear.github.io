@@ -372,13 +372,16 @@ ul{
 
 .third-section{
   margin-bottom: 100px;
-  width: 100%;
-  
+  width: 100%;  
 }
 
 .third-section__wrapper{
   width: 80%;
   margin: 0 auto;
+
+  @include phones{
+    width: 100%;
+  }
 }
 
 .title__third{
@@ -391,6 +394,10 @@ ul{
 
 .paragraph{
   margin-bottom: 10px;
+
+  @include phones{
+    margin-left: 10px;
+  }
 }
 
 .footer{   
